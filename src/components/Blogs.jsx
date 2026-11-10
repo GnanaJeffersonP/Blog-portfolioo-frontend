@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from "axios";
 import Footer from './common/Footer';
 import auth from "../firebase";
@@ -16,7 +16,7 @@ function Blogs() {
         window.scrollTo(0, 0);
 
         // Fetch blogs
-        axios.get("http://localhost:5000/api/blogs")
+        axios.get("https://blog-portfolio-backend-seven.vercel.app/api/blogs")
             .then((res) => {
                 setBlogs(res.data);
             })
@@ -40,12 +40,12 @@ function Blogs() {
     // Like Blog
     const handleLike = async (blog_id) => {
         try {
-            const response = await axios.patch(
-                `http://localhost:5000/api/blogs/like/${blog_id}`
-            );
+           const response = await axios.patch(
+  `https://blog-portfolio-backend-seven.vercel.app/api/blogs/like/${blog_id}`
+);
 
             if (response.status === 200) {
-                const res = await axios.get("http://localhost:5000/api/blogs");
+                const res = await axios.get("https://blog-portfolio-backend-seven.vercel.app/api/blogs");
                 setBlogs(res.data);
             }
 
@@ -68,7 +68,7 @@ function Blogs() {
 
         const likes = 0;
 
-        axios.post("http://localhost:5000/api/blogs", {
+        axios.post("https://blog-portfolio-backend-seven.vercel.app/api/blogs", {
             newTitle,
             date,
             newContent,
@@ -77,7 +77,7 @@ function Blogs() {
 
             console.log(res.data);
 
-            axios.get("http://localhost:5000/api/blogs")
+            axios.get("https://blog-portfolio-backend-seven.vercel.app/api/blogs")
                 .then((res) => {
                     setBlogs(res.data);
                 });

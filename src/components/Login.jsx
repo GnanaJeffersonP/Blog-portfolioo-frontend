@@ -16,18 +16,9 @@ function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                navigate("/home", { replace: true });
-            }
-        });
-
-        return () => unsubscribe();
-
-    }, [navigate]);
+   useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
     const handleLogin = async (e) => {
         e.preventDefault();

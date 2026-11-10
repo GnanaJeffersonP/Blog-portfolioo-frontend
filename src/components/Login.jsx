@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from "../firebase";
 import {
-    signInWithEmailAndPassword,
-    onAuthStateChanged
+    signInWithEmailAndPassword
+    
 } from 'firebase/auth';
 
 function Login() {

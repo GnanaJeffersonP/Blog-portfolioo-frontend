@@ -1,5 +1,5 @@
 
-import React from 'react'
+
 import BlogProfileImage from "../assets/Blog Website Design.jpg"
 import CSS from "../assets/css-3.png"
 import HTML from "../assets/html.png"
@@ -57,7 +57,7 @@ function Home() {
                         <img
                             src={BlogProfileImage}
                             className="relative w-64 md:w-96 rounded-3xl border border-white/10 shadow-2xl shadow-orange-500/10"
-                            alt="Blog Profile Image"
+                            alt="Profile"
                         />
                     </div>
 
@@ -210,7 +210,7 @@ function Home() {
                             <img
                                 src={BlogImage}
                                 className="relative w-72 md:w-96 rounded-3xl border border-white/10 shadow-2xl"
-                                alt="Blog Profile Image"
+                                alt="Project preview"
                             />
                         </div>
 

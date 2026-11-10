@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { use } from 'react'
 import auth from '../../firebase'
 import { signOut } from 'firebase/auth'
 function Navbar() {

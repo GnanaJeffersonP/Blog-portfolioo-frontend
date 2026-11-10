@@ -14,7 +14,17 @@ function App() {
         <Navbar />
 
         <Routes>
-          {/* Protected Routes */}
+          {/* Default route - Login */}
+          <Route
+            path="/"
+            element={<Navigate to="/login" replace />}
+          />
+
+          {/* Public routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+          {/* Protected routes */}
           <Route
             path="/home"
             element={
@@ -33,12 +43,11 @@ function App() {
             }
           />
 
-          {/* Public Routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-
-          {/* Default Route */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          {/* Unknown routes */}
+          <Route
+            path="*"
+            element={<Navigate to="/login" replace />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
